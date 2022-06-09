@@ -1,0 +1,143 @@
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --clr-acc: #2355f2;
+        --clr-body: white;
+        --clr-txt: #595959;
+        --clr-text-sec: #a6a6a6;
+        --clr-fill: #f5f7fa;
+        --clr-stroke: #e6e8f0;
+    }
+    
+    html {
+        font-family: "Work Sans";
+        font-size: 20px;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    main {
+        padding-inline: 1rem;
+        background-color: white;
+    }
+    
+    .page-header {
+        background-color: var(--clr-acc);
+        background-image: url('Pattern.png');
+        padding: 3rem 1rem;
+    }
+    
+    .title {
+        margin: 0;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .main-text {
+        padding: 1rem 1rem;
+        color: var(--clr-txt);
+    }
+    
+    .sr-only {
+        position: absolute;
+        top: -1000rem;
+    }
+    
+    .subscribe-wrapper {
+        display: flex;
+        gap: 0.25rem;
+    }
+    
+    .subscribe-field {
+        width: 75%;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--clr-fill);
+        border: 1px solid var(--clr-stroke);
+        border-radius: 0.25rem;
+        font-family: inherit;
+    }
+    
+    .subscribe-field::placeholder {
+        color: var(--clr-text-sec);
+    }
+    
+    .subscribe-btn {
+        width: 25%;
+        font-family: inherit;
+        background-color: var(--clr-acc);
+        color: white;
+        border-radius: 0.25rem;
+        border: none;
+    }
+    
+    .secondary-text {
+        color: var(--clr-text-sec);
+    }
+    
+    .person {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-block: 1rem;
+    }
+    
+    .person-info>p {
+        margin: 0;
+    }
+    
+    .person-name {
+        color: black;
+        font-weight: 700;
+    }
+    
+    .person-job {
+        color: var(--clr-txt);
+    }
+    
+    .quote {
+        color: var(--clr-txt);
+        font-size: .65rem;
+        text-align: center;
+    }
+    
+    .quote::before,
+    .quote::after {
+        padding: 0;
+    }
+    
+    @media screen and (min-widht:768px) {
+        body {
+            background: url(Background.png) center no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            place-content: center;
+        }
+        body>* {
+            width: min(500 px, 100%);
+        }
+        header {
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        main {
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        .main-text {
+            margin-top: 0;
+        }
+        .quote {
+            padding-bottom: 2rem;
+        }
+    }
